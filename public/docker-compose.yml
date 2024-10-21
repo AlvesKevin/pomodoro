@@ -1,0 +1,11 @@
+version: '3'
+services:
+  pomodoro-app:
+    build: .
+    ports:
+      - "3120:3120"
+    volumes:
+      - ./public:/usr/src/app/public
+      - ./server.js:/usr/src/app/server.js
+    environment:
+      - NODE_ENV=production
